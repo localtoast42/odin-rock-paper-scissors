@@ -17,7 +17,10 @@ function playRound(playerSelection, computerSelection) {
     let playerWin = 0
 
     if (playerSelectionIndex === computerSelectionIndex) {
-        message = "You Tied! Try again"
+        console.log("You Tied! Try again")
+        playerSelection = window.prompt("Choose rock, paper, or scissors");
+        computerSelection = getComputerChoice();
+        return playRound(playerSelection, computerSelection)
     } else if (((playerSelectionIndex + 1) % 3) === computerSelectionIndex) {
         message = "You Lose! " + computerSelection + " beats " + playerSelection
     } else {
