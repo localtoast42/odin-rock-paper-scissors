@@ -23,7 +23,19 @@ function playRound(playerSelection, computerSelection) {
     return message
 }
 
+function game() {
+    let playerSelection = ''
+    let computerSelection = ''
+
+    for (let i = 0; i < 5; i++) {
+        playerSelection = window.prompt("Choose rock, paper, or scissors");
+        computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection))
+    }
+}
+
 const choices = ["rock", "paper", "scissors"];
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection))
+// const playerSelection = "rock";
+// const computerSelection = getComputerChoice();
+// console.log(playRound(playerSelection, computerSelection))
+game()
