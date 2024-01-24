@@ -8,8 +8,8 @@ function playRound(playerSelection, computerSelection) {
         return "Invalid player selection, try again"
     }
 
-    let playerSelectionIndex = choices.findIndex(playerSelection.toLowerCase());
-    let computerSelectionIndex = choices.findIndex(computerSelection.toLowerCase());
+    let playerSelectionIndex = choices.indexOf(playerSelection.toLowerCase());
+    let computerSelectionIndex = choices.indexOf(computerSelection.toLowerCase());
     let message = ""
 
     if (playerSelectionIndex === computerSelectionIndex) {
